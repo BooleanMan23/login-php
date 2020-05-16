@@ -20,11 +20,10 @@
     <a href="signup.php">Dont have an account? Sign up here!</a>
     <?php
         if(isset($_SESSION['u_id'])){
-            echo "Welcome " .$_SESSION['u_uid'];
+            header("Location: homepage.php?");
+         exit();
         }
-        echo '    <form action="includes/logout.inc.php" method = "POST">
-        <button type = "submit" name = "submit">Logout</button>
-    </form>'
+      
         
     ?>
 
